@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'poppins',sans-serif;
+  
+}
+.navbar{
+  position: fixed;
+  top:0;
+  width: 100%;
+  background: #111; 
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+}
+.logo span{
+  margin-left:5px;
+  color: red;
+}
+.navbar .nav-links{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+
+
+}
+
+.about {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 10%;
+  gap: 40px;
+  font-style: italic;
+}
+
+.about-img img {
+  width: 550px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+   /* animation part */
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.about-text {
+  max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideIn 1s ease-out forwards;
+}
+.about-text span{
+  font-size: 22px;
+  font-weight: 600;
+  
+}
+
+/* Keyframes */
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.deals__tabs .btn{
+  border: none;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 15px 20px;
+  background: rgb(255, 183, 0);
+  border-radius: 10px;
+}
+/* ---------------- Deals Section ---------------- */
+
+
+.deals__container {
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.deals__container .section__header {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.25rem;
+  text-align: center;
+}
+
+.deals__container .section__description {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.5rem;
+}
+
+/* Tabs Buttons */
+.deals__tabs {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.deals__tabs .btn {
+  font-weight: 600;
+}
+
+.deals__tabs .btn.active {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Content */
+.tab__content {
+  display: none;
+  gap: 1rem;
+  animation: fadeEffect 1s;
+}
+
+.tab__content.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Deals Card */
+.deals__card {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ;
+}
+.deals__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.deals__card img {
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+.deals__rating {
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.deals__rating span:last-child {
+    color: #FFD700;
+}
+
+.deals__card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+}
+
+/* Card Details Grid */
+.deals__card__grid {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.deals__card__grid div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.deals__card__grid div span {
+  font-size: 1.2rem;
+  
+}
+
+/* Card Footer */
+.deals__card__footer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.deals__card__footer h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  
+}
+
+.deals__card__footer h3 span {
+  font-size: 0.9rem;
+  font-weight: 400;
+ 
+}
+
+.deals__card__footer a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.deals__card__footer a:hover {
+  text-align: center;
+}
+
+.review, .contact, .footer {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section__header {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.review__container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review__card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  transition: transform 0.3s ;
+}
+
+.review__author {
+  margin-top: 1rem;
+}
+
+.review__author img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.review__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact__form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__form input, 
+.contact__form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact__form .btn {
+  background: rgb(255, 183, 0);
+  color: black;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact__form .btn:hover {
+  background: #e64a19;
+}
+
+.contact__info {
+  text-align: left;
+  flex: 1;
+  min-width: 250px;
+  margin-top: 20px;
+  
+}
+.contact__info p{
+    margin-bottom: 20px;
+}
+
+.social__icons a {
+  color: #333;
+  margin-right: 10px;
+  font-size: 1.3rem;
+  
+}
+.social__icons a:hover {
+  color:red;
+  
+}
+
+.footer {
+  background: #111;
+  color: #eee;
+  padding: 20px 10%;
+}
+
+
+.footer__copy {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+
+
